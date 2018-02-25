@@ -1,0 +1,41 @@
+server:
+  port: 8888
+  context-path: /config
+  
+spring:
+  application:
+    name: config
+  # admin configuration 
+  boot:
+    admin:
+      url: http://localhost:1111
+  # git uri configuration, it is placed in the home under git-config folder
+  cloud:
+    config:
+      server:
+        git:
+         # uri: ${HOME}/git-config
+          uri: https://github.com/suriyaprakhash/microservices/git-config
+          
+# management security 
+management:
+  security:
+    # set false to disable security to see the metrics 
+    # and other management in boot admin 
+    enabled: false  
+        
+# actuator endpoints    
+endpoints:
+  info:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+
+# info endpoint 
+info:
+  app:
+    name: config
+    descritpion: This is a configuration server microservice
+    version: 0.0.1-SNAPSHOT

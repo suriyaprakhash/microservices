@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  context-path: /client
+  
+spring:
+  application:
+    name: client
+  # max file and request size 
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+  # admin configuration 
+  boot:
+    admin:
+      url: http://localhost:1111
+  # config service configuration
+  cloud:
+    config:
+      uri: http://localhost:8888/config
+      
+# logging
+logging:
+  level:
+    com:
+      suriya:
+        ms: INFO   
+
+# management security 
+management:
+  security:
+    # set false to disable security to see the metrics 
+    # and other management in boot admin 
+    enabled: false  
+        
+# actuator endpoints    
+endpoints:
+  info:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+
+# info endpoint 
+info:
+  app:
+    name: client
+    descritpion: This is just an client template
+    version: 0.0.1-SNAPSHOT
