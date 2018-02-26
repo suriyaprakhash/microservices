@@ -81,6 +81,18 @@
 			<version>1.5.1</version>
 		</dependency>
 
+		<!-- Needed for config server retry -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<!-- Needed for config server retry -->
+		<dependency>
+			<groupId>org.springframework.retry</groupId>
+			<artifactId>spring-retry</artifactId>
+		</dependency>
+
+
 		<!-- cloud starter version pulled from dependency mangement, here for config 
 			client -->
 		<dependency>

@@ -14,8 +14,9 @@ spring:
     config:
       server:
         git:
-         # uri: ${HOME}/git-config
-          uri: https://github.com/suriyaprakhash/microservices/git-config
+          uri: https://github.com/suriyaprakhash/microservices.git
+          searchPaths: git-config
+  
           
 # management security 
 management:

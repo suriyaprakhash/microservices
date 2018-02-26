@@ -30,7 +30,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUploadController {
 	private static final Logger logger = LogManager.getLogger(FileUploadController.class);
 
-	@Value("${message:same class}")
+	// @Value("${message:same class}")
+	@Value("${message}")
 	private String message;
 
 	@GetMapping("/start")

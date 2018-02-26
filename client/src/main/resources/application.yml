@@ -1,11 +1,6 @@
-server:
-  port: 8080
-  context-path: /client
-  
+
 spring:
-  application:
-    name: client
-  # max file and request size 
+  # max file and request size for multipart
   http:
     multipart:
       max-file-size: 10MB
